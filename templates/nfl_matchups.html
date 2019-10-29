@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title%}This Week's Matchups{% endblock title %}
+
+{% block content %}
+
+{% if messages %}
+<ul class="alert alert-danger" role="alert">
+  {% for message in messages %}
+  <li>{% if message.tags %}{% endif %}{{ message }}</li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+<h2>NFL Games for {{ week }}</h2>
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Time (EST)</th>  
+        <th scope="col">Away Team</th>
+
+        <th scope="col">Away Spread</th>
+        <th></th>
+        <th scope="col">Home Team</th>
+        <th scope="col">Home Spread</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for game in games%}
+        {% if game.date_time > now %}
+        <tr>
+            <td>{{ game.date_time }}</td>  
+            <td>{{ game.away_team }}</td>
+            {% if game.away_spread > 0 %}
+                <td>+{{ game.away_spread }}</td>
+            {% else %}
+                <td>{{ game.away_spread }}</td>
+            {% endif %}
+            <td>at</td>
+            <td>{{ game.home_team }}</td>
+            {% if game.home_spread > 0 %}
+                <td>+{{ game.home_spread }}</td>
+            {% else %}
+                <td>{{ game.home_spread }}</td>
+            {% endif %}
+            <td><a href="{% url 'nfl_matchup_detail' game.pk %}"><button type="button" class="btn btn-primary btn-sm" >View</button></a></td>
+        </tr>
+        {% endif %}
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock content %}

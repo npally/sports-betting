@@ -1,0 +1,136 @@
+week,date,time,away_team,home_team,week
+9,10/31/19,8:20PM,San Francisco 49ers,Arizona Cardinals,9
+9,11/3/19,9:30AM,Houston Texans,Jacksonville Jaguars,9
+9,11/3/19,1:00PM,Washington Redskins,Buffalo Bills,9
+9,11/3/19,1:00PM,Indianapolis Colts,Pittsburgh Steelers,9
+9,11/3/19,1:00PM,Minnesota Vikings,Kansas City Chiefs,9
+9,11/3/19,1:00PM,Chicago Bears,Philadelphia Eagles,9
+9,11/3/19,1:00PM,Tennessee Titans,Carolina Panthers,9
+9,11/3/19,1:00PM,New York Jets,Miami Dolphins,9
+9,11/3/19,4:05PM,Tampa Bay Buccaneers,Seattle Seahawks,9
+9,11/3/19,4:05PM,Detroit Lions,Oakland Raiders,9
+9,11/3/19,4:25PM,Green Bay Packers,Los Angeles Chargers,9
+9,11/3/19,4:25PM,Cleveland Browns,Denver Broncos,9
+9,11/3/19,8:20PM,New England Patriots,Baltimore Ravens,9
+9,11/4/19,8:15PM,Dallas Cowboys,New York Giants,9
+10,11/7/19,8:20PM,Los Angeles Chargers,Oakland Raiders,10
+10,11/10/19,1:00PM,Detroit Lions,Chicago Bears,10
+10,11/10/19,1:00PM,Arizona Cardinals,Tampa Bay Buccaneers,10
+10,11/10/19,1:00PM,Kansas City Chiefs,Tennessee Titans,10
+10,11/10/19,1:00PM,Buffalo Bills,Cleveland Browns,10
+10,11/10/19,1:00PM,Baltimore Ravens,Cincinnati Bengals,10
+10,11/10/19,1:00PM,New York Giants,New York Jets,10
+10,11/10/19,1:00PM,Carolina Panthers,Green Bay Packers,10
+10,11/10/19,1:00PM,Atlanta Falcons,New Orleans Saints,10
+10,11/10/19,4:05PM,Miami Dolphins,Indianapolis Colts,10
+10,11/10/19,4:25PM,Los Angeles Rams,Pittsburgh Steelers,10
+10,11/10/19,8:20PM,Minnesota Vikings,Dallas Cowboys,10
+10,11/11/19,8:15PM,Seattle Seahawks,San Francisco 49ers,10
+11,11/14/19,8:20PM,Pittsburgh Steelers,Cleveland Browns,11
+11,11/17/19,1:00PM,New Orleans Saints,Tampa Bay Buccaneers,11
+11,11/17/19,1:00PM,Atlanta Falcons,Carolina Panthers,11
+11,11/17/19,1:00PM,Denver Broncos,Minnesota Vikings,11
+11,11/17/19,1:00PM,Houston Texans,Baltimore Ravens,11
+11,11/17/19,1:00PM,Dallas Cowboys,Detroit Lions,11
+11,11/17/19,1:00PM,Jacksonville Jaguars,Indianapolis Colts,11
+11,11/17/19,1:00PM,Buffalo Bills,Miami Dolphins,11
+11,11/17/19,1:00PM,New York Jets,Washington Redskins,11
+11,11/17/19,4:05PM,Arizona Cardinals,San Francisco 49ers,11
+11,11/17/19,4:25PM,New England Patriots,Philadelphia Eagles,11
+11,11/17/19,4:25PM,Cincinnati Bengals,Oakland Raiders,11
+11,11/17/19,8:20PM,Chicago Bears,Los Angeles Rams,11
+11,11/18/19,8:15PM,Kansas City Chiefs,Los Angeles Chargers,11
+12,11/21/19,8:20PM,Indianapolis Colts,Houston Texans,12
+12,11/24/19,1:00PM,Oakland Raiders,New York Jets,12
+12,11/24/19,1:00PM,Detroit Lions,Washington Redskins,12
+12,11/24/19,1:00PM,Pittsburgh Steelers,Cincinnati Bengals,12
+12,11/24/19,1:00PM,Denver Broncos,Buffalo Bills,12
+12,11/24/19,1:00PM,Tampa Bay Buccaneers,Atlanta Falcons,12
+12,11/24/19,1:00PM,Miami Dolphins,Cleveland Browns,12
+12,11/24/19,1:00PM,New York Giants,Chicago Bears,12
+12,11/24/19,1:00PM,Carolina Panthers,New Orleans Saints,12
+12,11/24/19,4:05PM,Jacksonville Jaguars,Tennessee Titans,12
+12,11/24/19,4:25PM,Green Bay Packers,San Francisco 49ers,12
+12,11/24/19,4:25PM,Dallas Cowboys,New England Patriots,12
+12,11/24/19,8:20PM,Seattle Seahawks,Philadelphia Eagles,12
+12,11/25/19,8:15PM,Baltimore Ravens,Los Angeles Rams,12
+13,11/28/19,12:30PM,Chicago Bears,Detroit Lions,13
+13,11/28/19,4:30PM,Buffalo Bills,Dallas Cowboys,13
+13,11/28/19,8:20PM,New Orleans Saints,Atlanta Falcons,13
+13,12/1/19,1:00PM,New York Jets,Cincinnati Bengals,13
+13,12/1/19,1:00PM,Washington Redskins,Carolina Panthers,13
+13,12/1/19,1:00PM,Green Bay Packers,New York Giants,13
+13,12/1/19,1:00PM,Oakland Raiders,Kansas City Chiefs,13
+13,12/1/19,1:00PM,San Francisco 49ers,Baltimore Ravens,13
+13,12/1/19,1:00PM,Philadelphia Eagles,Miami Dolphins,13
+13,12/1/19,1:00PM,Tampa Bay Buccaneers,Jacksonville Jaguars,13
+13,12/1/19,1:00PM,Tennessee Titans,Indianapolis Colts,13
+13,12/1/19,4:05PM,Los Angeles Rams,Arizona Cardinals,13
+13,12/1/19,4:25PM,Cleveland Browns,Pittsburgh Steelers,13
+13,12/1/19,4:25PM,Los Angeles Chargers,Denver Broncos,13
+13,12/1/19,8:20PM,New England Patriots,Houston Texans,13
+13,12/2/19,8:15PM,Minnesota Vikings,Seattle Seahawks,13
+14,12/5/19,8:20PM,Dallas Cowboys,Chicago Bears,14
+14,12/8/19,1:00PM,Baltimore Ravens,Buffalo Bills,14
+14,12/8/19,1:00PM,Carolina Panthers,Atlanta Falcons,14
+14,12/8/19,1:00PM,Detroit Lions,Minnesota Vikings,14
+14,12/8/19,1:00PM,Washington Redskins,Green Bay Packers,14
+14,12/8/19,1:00PM,Indianapolis Colts,Tampa Bay Buccaneers,14
+14,12/8/19,1:00PM,Denver Broncos,Houston Texans,14
+14,12/8/19,1:00PM,San Francisco 49ers,New Orleans Saints,14
+14,12/8/19,1:00PM,Miami Dolphins,New York Jets,14
+14,12/8/19,1:00PM,Cincinnati Bengals,Cleveland Browns,14
+14,12/8/19,4:05PM,Los Angeles Chargers,Jacksonville Jaguars,14
+14,12/8/19,4:25PM,Tennessee Titans,Oakland Raiders,14
+14,12/8/19,4:25PM,Pittsburgh Steelers,Arizona Cardinals,14
+14,12/8/19,4:25PM,Kansas City Chiefs,New England Patriots,14
+14,12/8/19,8:20PM,Seattle Seahawks,Los Angeles Rams,14
+14,12/9/19,8:15PM,New York Giants,Philadelphia Eagles,14
+15,12/12/19,8:20PM,New York Jets,Baltimore Ravens,15
+15,12/15/19,1:00PM,Chicago Bears,Green Bay Packers,15
+15,12/15/19,1:00PM,Seattle Seahawks,Carolina Panthers,15
+15,12/15/19,1:00PM,Buffalo Bills,Pittsburgh Steelers,15
+15,12/15/19,1:00PM,Houston Texans,Tennessee Titans,15
+15,12/15/19,1:00PM,New England Patriots,Cincinnati Bengals,15
+15,12/15/19,1:00PM,Denver Broncos,Kansas City Chiefs,15
+15,12/15/19,1:00PM,Philadelphia Eagles,Washington Redskins,15
+15,12/15/19,1:00PM,Tampa Bay Buccaneers,Detroit Lions,15
+15,12/15/19,1:00PM,Miami Dolphins,New York Giants,15
+15,12/15/19,4:05PM,Jacksonville Jaguars,Oakland Raiders,15
+15,12/15/19,4:05PM,Cleveland Browns,Arizona Cardinals,15
+15,12/15/19,4:25PM,Atlanta Falcons,San Francisco 49ers,15
+15,12/15/19,4:25PM,Los Angeles Rams,Dallas Cowboys,15
+15,12/15/19,8:20PM,Minnesota Vikings,Los Angeles Chargers,15
+15,12/16/19,8:15PM,Indianapolis Colts,New Orleans Saints,15
+16,12/22/19,1:00PM,Cincinnati Bengals,Miami Dolphins,16
+16,12/22/19,1:00PM,Jacksonville Jaguars,Atlanta Falcons,16
+16,12/22/19,1:00PM,Baltimore Ravens,Cleveland Browns,16
+16,12/22/19,1:00PM,New York Giants,Washington Redskins,16
+16,12/22/19,1:00PM,Carolina Panthers,Indianapolis Colts,16
+16,12/22/19,1:00PM,Buffalo Bills,New England Patriots,16
+16,12/22/19,1:00PM,New Orleans Saints,Tennessee Titans,16
+16,12/22/19,1:00PM,Houston Texans,Tampa Bay Buccaneers,16
+16,12/22/19,1:00PM,Los Angeles Rams,San Francisco 49ers,16
+16,12/22/19,1:00PM,Oakland Raiders,Los Angeles Chargers,16
+16,12/22/19,1:00PM,Detroit Lions,Denver Broncos,16
+16,12/22/19,1:00PM,Pittsburgh Steelers,New York Jets,16
+16,12/22/19,4:25PM,Arizona Cardinals,Seattle Seahawks,16
+16,12/22/19,4:25PM,Dallas Cowboys,Philadelphia Eagles,16
+16,12/22/19,8:20PM,Kansas City Chiefs,Chicago Bears,16
+16,12/23/19,8:15PM,Green Bay Packers,Minnesota Vikings,16
+17,12/29/19,1:00PM,Miami Dolphins,New England Patriots,17
+17,12/29/19,1:00PM,Tennessee Titans,Houston Texans,17
+17,12/29/19,1:00PM,Los Angeles Chargers,Kansas City Chiefs,17
+17,12/29/19,1:00PM,Chicago Bears,Minnesota Vikings,17
+17,12/29/19,1:00PM,Atlanta Falcons,Tampa Bay Buccaneers,17
+17,12/29/19,1:00PM,New York Jets,Buffalo Bills,17
+17,12/29/19,1:00PM,Washington Redskins,Dallas Cowboys,17
+17,12/29/19,1:00PM,New Orleans Saints,Carolina Panthers,17
+17,12/29/19,1:00PM,Green Bay Packers,Detroit Lions,17
+17,12/29/19,1:00PM,Pittsburgh Steelers,Baltimore Ravens,17
+17,12/29/19,1:00PM,Indianapolis Colts,Jacksonville Jaguars,17
+17,12/29/19,1:00PM,Philadelphia Eagles,New York Giants,17
+17,12/29/19,1:00PM,Cleveland Browns,Cincinnati Bengals,17
+17,12/29/19,4:25PM,Oakland Raiders,Denver Broncos,17
+17,12/29/19,4:25PM,Arizona Cardinals,Los Angeles Rams,17
+17,12/29/19,4:25PM,San Francisco 49ers,Seattle Seahawks,17

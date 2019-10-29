@@ -4,12 +4,32 @@
 
 {% block content %}
 
-<div class="jumbotron">
-    <h1 class="display-4">NBA Pickem</h1>
-    <p class="lead">You think you know this game? Prove it.</p>
-    <p class="lead">
-        <a class="btn btn-primary btn-lg" href=""
-        role="button">View Today's Matchups</a>
-    </p>
+<div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Nick's Picks</h1>
+          <p class="lead">Fantastic fun for the whole family.</p>
+        </div>
 </div>
+
+<div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">NBA Matchups</h5>
+              <p class="card-text">See today's lines.</p>
+              <a href="{% url 'nba_matchups' %}" class="btn btn-primary">View Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">NFL Matchups</h5>
+              <p class="card-text">See this week's lines.</p>
+              <a href="{% url 'nfl_matchups' %}" class="btn btn-primary">View Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
 {% endblock content %}

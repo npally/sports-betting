@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'crispy_forms',
 
     # Local
-    'games.apps.GamesConfig',
+    'nba.apps.NbaConfig',
+    'nfl.apps.NflConfig',
     'users.apps.UsersConfig',
 ]
 
@@ -82,8 +83,15 @@ WSGI_APPLICATION = 'spread.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3')
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'spread_db',
+        'USER': 'kilgoretrout',
+        'PASSWORD': 'Arsenal1921',
+        'HOST': 'localhost',
+        'PORT': '5432'
+        
     }
 }
 
@@ -120,6 +128,9 @@ USE_L10N = True
 
 USE_TZ = True
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
@@ -127,5 +138,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'users.CustomUser'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 
 # STATIC_ROOT = '/home/kilgoretrout1/nfl-pickem/static'

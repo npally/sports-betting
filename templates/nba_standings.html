@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title%}NBA Standings{% endblock title %}
+
+{% block content %}
+<h2>NBA Pick Standings</h2>
+
+<table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Username</th>  
+            <th scope="col">Wins</th>
+            <th scope="col">Losses</th>
+            <th scope="col">Pushes</th>
+            <th scope="col">%</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for rec in recs %}
+              
+            <tr>
+                <td>{{ rec.user.username }}</td>  
+                <td>{{ rec.wins }}</td>
+                <td>{{ rec.losses }}</td>
+                <td>{{ rec.pushes }}</td>
+                <td>{{ rec.get_winning_percentage }}%</td>      
+            </tr>
+            
+          {% endfor %}
+        </tbody>
+      </table>
+{% endblock content%}

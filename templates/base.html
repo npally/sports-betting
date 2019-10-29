@@ -8,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
-    <title>{% block title %}NBA Pickem{% endblock title %}</title>
+    <title>{% block title %}Nick's Picks{% endblock title %}</title>
 
       <style>
         input {max-width: 12em};
@@ -18,7 +18,7 @@
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-      <a class="navbar-brand" href="{% url 'home' %}">NBA Pickem</a>
+      <a class="navbar-brand" href="{% url 'home' %}">Nick's Picks</a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse"\
       data-target="#navbarCollapse" aria-controls="navbarCollapse"\
@@ -28,12 +28,45 @@
 
       <div class="collapse navbar-collapse" id="navbarCollapse">
 
-        <ul class="nav navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="">Home</a>
-          </li>
+          <ul class="nav navbar-nav">
+              <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
+                </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    NBA
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{% url 'nba_matchups' %}">Matchups</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{% url 'nba_standings' %}">Standings</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    NFL
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{% url 'nfl_matchups' %}">Matchups</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{% url 'nfl_standings' %}">Standings</a>
+                  </div>
+                </li>
+            </ul>
 
-        </ul>
+        <!-- <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'nba_matchups' %}">NBA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'nfl_matchups' %}">NFL</a>
+          </li>
+       
+
+        </ul> -->
         {% if user.is_authenticated %}
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
@@ -50,6 +83,8 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{% url 'password_change' %}">
                 Change Password</a>
+                <a class="dropdown-item" href="{% url 'profile' %}">
+                  My Profile</a>
               </div>
             </li>
           </ul>
