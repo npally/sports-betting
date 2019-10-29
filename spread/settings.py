@@ -26,7 +26,7 @@ SECRET_KEY = 'f#b0*y$f#a(l7ix7c9i71l_an83h48en3pt(adf&sohj#zx6yg'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+# deployment = "www.nicholaspally.com"
 
 # Application definition
 

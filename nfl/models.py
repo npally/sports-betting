@@ -7,6 +7,8 @@ from datetime import datetime
 
 import scripts
 # Create your models here.
+CSV = 'csv_files/nfl_schedule.csv'
+# deployment '/home/kilgoretrout1/nba-picks/csv_files/nfl_schedule.csv'
 
 
 class Week(models.Model):
@@ -41,7 +43,7 @@ class Game(models.Model):
 
     @classmethod
     def upload_games(cls):
-        with open('csv_files/nfl_schedule.csv') as file:
+        with open(CSV) as file:
             csv_reader = csv.DictReader(file)
 
             for row in csv_reader:

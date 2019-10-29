@@ -6,6 +6,9 @@ from datetime import datetime, date, timedelta
 import csv
 
 # Create your models here.
+CSV = 'csv_files/nba_games19-20.csv'
+# deployment '/home/kilgoretrout1/nba-picks/csv_files/nba_games19-20.csv'
+
 class Game(models.Model):
     home_team = models.CharField(max_length=30)
     away_team = models.CharField(max_length=30)
