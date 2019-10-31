@@ -60,7 +60,7 @@ for score in scores:
             game.save()
 
 
-picks = Pick.objects.all()
+picks = Pick.objects.filter(game__date_time__date=yesterday)
 for pick in picks:
     pick.get_outcome()
     pick.save()

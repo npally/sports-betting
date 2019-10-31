@@ -12,6 +12,11 @@
 </ul>
 {% endif %}
 
+<h2>This Week's Picks</h2>
+{% for pick in picks %}
+<p>- {{ pick.get_pick }}</p>
+{% endfor %}
+<br>
 <h2>NFL Games for {{ week }}</h2>
 
 <table class="table table-hover">

@@ -13,6 +13,7 @@ class SignUpView(CreateView):
     success_url = reverse_lazy('login')
     template_name = 'signup.html'
 
+
 class PassRequestToFormViewMixin:
     def get_form_kwargs(self):
         kwargs = super(PassRequestToFormViewMixin, self).get_form_kwargs()

@@ -76,6 +76,14 @@ class Pick(models.Model):
     
     def __str__(self):
         return "{} | {} {}".format(self.game, self.user, self.pick)
+
+    def get_pick(self):
+        points = float(self.pick.split()[-1])
+        team = ' '.join(self.pick.split()[:-1])
+        if points < 0:
+            return "{} {}".format(team, points)
+        elif points > 0:
+            return "{} +{}".format(team, points)
     
     def get_outcome(self):
         info = self.pick.split()

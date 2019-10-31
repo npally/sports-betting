@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'nba.apps.NbaConfig',
     'nfl.apps.NflConfig',
     'users.apps.UsersConfig',
+   
 ]
 
 MIDDLEWARE = [
@@ -90,7 +91,15 @@ DATABASES = {
         'USER': 'kilgoretrout',
         'PASSWORD': 'Arsenal1921',
         'HOST': 'localhost',
-        'PORT': '5432'
+        'PORT': '5432',
+
+        # deployment
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        # 'NAME': 'nba_picks_db',
+        # 'USER': 'kilgoretrout',
+        # 'PASSWORD': 'Arsenal1921',
+        # 'HOST': 'kilgoretrout1-1363.postgres.pythonanywhere-services.com',
+        # 'PORT': 11363,
         
     }
 }

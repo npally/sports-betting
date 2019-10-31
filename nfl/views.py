@@ -13,7 +13,7 @@ import scripts
 from .models import Game, Week, Pick, Nfl_Record
 # Create your views here.
 
-WEEK = scripts.get_week()
+WEEK = 9
 
 class NflMatchupView(LoginRequiredMixin, TemplateView):
     template_name = 'nfl_matchups.html'
@@ -21,6 +21,8 @@ class NflMatchupView(LoginRequiredMixin, TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        u = self.request.user
+        context['picks'] = Pick.objects.filter(user=u, game__week=WEEK)
         context['games'] = Game.objects.filter(week=WEEK)
         context['week'] = Week.objects.get(pk=WEEK)
         context['now'] = timezone.now()
@@ -36,20 +38,21 @@ def nfl_matchup_detail(request, pk):
         user = request.user
         game = matchup
 
-        picks = Pick.objects.filter(user=user, week=WEEK)
+        picks = Pick.objects.filter(user=user, game__week=WEEK)
+        wp = Pick.objects.filter(user=user, game__week=WEEK).count()
         for p in picks:
             if p.game == game:
                 messages.error(request, 'This game has already been picked')
-                return HttpResponseRedirect(reverse('nba_matchups'))
-
-            if p.count() > 2:
-                messages.error(request, 'You can only choose 3 games per week')
                 return HttpResponseRedirect(reverse('nfl_matchups'))
+
+        if wp > 2:
+            messages.error(request, 'You can only choose 3 games per week')
+            return HttpResponseRedirect(reverse('nfl_matchups'))
 
         pick = Pick(user=user, game=game, pick=spread)
         pick.save()
 
-        return render(request, 'home.html')
+        return HttpResponseRedirect(reverse('nfl_matchups'))
     else:
         return render(request, 'nfl_matchup_detail.html', {'matchup': matchup})
 
