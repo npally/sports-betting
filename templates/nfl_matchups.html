@@ -33,7 +33,7 @@
     </thead>
     <tbody>
       {% for game in games%}
-        {% if game.date_time > now %}
+        {% if game.home_spread != None %}
         <tr>
             <td>{{ game.date_time }}</td>  
             <td>{{ game.away_team }}</td>
@@ -49,7 +49,12 @@
             {% else %}
                 <td>{{ game.home_spread }}</td>
             {% endif %}
+
+            {% if game.date_time > now %}
             <td><a href="{% url 'nfl_matchup_detail' game.pk %}"><button type="button" class="btn btn-primary btn-sm" >View</button></a></td>
+            {% else %}
+            <td>game started</td>
+            {% endif %}
         </tr>
         {% endif %}
       {% endfor %}

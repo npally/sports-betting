@@ -69,7 +69,9 @@ class Pick(models.Model):
         if points < 0:
             return "{} | {} {}".format(self.game, self.user, self.pick)
         elif points > 0:
-            return "{} | {} +{}".format(self.game, self.user, self.pick)
+            p = self.pick.split()[-1]
+            team = self.pick.split()[:-1]
+            return "{} | {} {} +{}".format(self.game, team, p)
     
     def get_pick(self):
         points = float(self.pick.split()[-1])
@@ -121,7 +123,7 @@ class Nba_Record(models.Model):
 
         today = date.today()
         yesterday = today - timedelta(days=1)
-        picks = Pick.objects.filter(user=self.user, game__date_time__date=yesterday)
+        picks = Pick.objects.filter(user=self.user)
         w = 0
         l = 0
         p = 0

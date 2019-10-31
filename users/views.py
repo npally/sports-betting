@@ -15,6 +15,7 @@ class SignUpView(CreateView):
 
 
 class PassRequestToFormViewMixin:
+    
     def get_form_kwargs(self):
         kwargs = super(PassRequestToFormViewMixin, self).get_form_kwargs()
         kwargs['request'] = self.request

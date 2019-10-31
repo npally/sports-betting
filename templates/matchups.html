@@ -32,7 +32,7 @@
     </thead>
     <tbody>
       {% for game in games%}
-        {% if game.date_time > now %}
+        {% if game.date_time > now and game.home_spread != None %}
         <tr>
             <td>{{ game.date_time }}</td>  
             <td>{{ game.away_team }}</td>
