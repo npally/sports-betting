@@ -3,12 +3,23 @@
 {% block title %}My Profile{% endblock title %}
 
 {% block content %}
+<div class="btn-group btn-group-lg" role="group" aria-label="...">
+        <button type="button" class="btn btn-success">
+            Balance $ <span class="badge badge-light">{{ user.account.get_balance }}</span>
+        </button>
+        <button type="button" class="btn btn-secondary">
+                In Play $ <span class="badge badge-light">{{ user.account.get_in_play }}</span>
+        </button>
+        <button type="button" class="btn btn-success">
+                Winnings $ <span class="badge badge-light">{{ user.account.get_winnings }}</span>
+        </button>
+</div>
+<br>
+<br>
 <h2><u>User Information</u></h2>
 <a href="{% url 'edit_profile' user.pk %}">edit</a>  |  <a href="{% url 'password_change' %}">change password</a>
-<h3>Name: {{ user.get_name }}</h3>
-<h3>Username: {{ user.username }}</h3>
-<h3>Email Address: {{ user.email }}</h3>
-<br>
-
+<h4>Name: {{ user.get_name }}</h4>
+<h4>Username: {{ user.username }}</h4>
+<h4>Email Address: {{ user.email }}</h4>
 
 {% endblock content %}

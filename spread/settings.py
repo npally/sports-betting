@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'nba.apps.NbaConfig',
     'nfl.apps.NflConfig',
     'users.apps.UsersConfig',
+    'accounts.apps.AccountsConfig',
    
 ]
 

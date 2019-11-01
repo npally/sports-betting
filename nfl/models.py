@@ -72,6 +72,7 @@ class Pick(models.Model):
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='nfl_pick_user')
     game = models.ForeignKey('Game', on_delete=models.CASCADE)
     pick = models.CharField(max_length=40)
+    wager = models.FloatField(null=True)
     outcome = models.CharField(max_length=5, choices=choices, null=True)
     
     def __str__(self):

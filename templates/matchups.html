@@ -13,7 +13,11 @@
 
 <h2>Today's Picks</h2>
 {% for pick in picks %}
-<p>- {{ pick.get_pick }}</p>
+{% if pick.wager is not None %}
+<h5>- {{ pick.get_pick }} | Wager: ${{ pick.wager }}</h5>
+{% else %}
+<h5>- {{ pick.get_pick }} | Wager: $0</h5>
+{% endif %}
 {% endfor %}
 <br>
 <h2>NBA Games for {{ today }}</h2>
@@ -48,7 +52,7 @@
             {% else %}
                 <td>{{ game.home_spread }}</td>
             {% endif %}
-            <td><a href="{% url 'matchup_detail' game.pk %}"><button type="button" class="btn btn-primary btn-sm" >View</button></a></td>
+            <td><a href="{% url 'matchup_detail' game.pk %}"><button type="button" class="btn btn-primary btn-sm">View</button></a></td>
         </tr>
         {% endif %}
       {% endfor %}

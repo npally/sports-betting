@@ -12,6 +12,7 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'spread.settings'
 django.setup()
 
 from nfl.models import Game, Pick, Nfl_Record
+from accounts.models import Account
 
 WEEK = scripts.get_week()
 w = WEEK
@@ -53,3 +54,9 @@ records = Nfl_Record.objects.all()
 for rec in records:
     rec.update_record()
     rec.save()
+
+accounts = Account.objects.all()
+
+for account in accounts:
+    account.calculate_balance()
+    account.save()

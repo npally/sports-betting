@@ -11,9 +11,10 @@ from datetime import date
 
 import scripts
 from .models import Game, Week, Pick, Nfl_Record
+from accounts.models import Account
 # Create your views here.
 
-WEEK = 9
+WEEK = scripts.get_week()
 
 class NflMatchupView(LoginRequiredMixin, TemplateView):
     template_name = 'nfl_matchups.html'
@@ -35,24 +36,43 @@ def nfl_matchup_detail(request, pk):
     if request.method == 'POST':
         g = 'game'+ str(matchup.id)
         spread = request.POST.get(g)
-        user = request.user
-        game = matchup
 
-        picks = Pick.objects.filter(user=user, game__week=WEEK)
-        wp = Pick.objects.filter(user=user, game__week=WEEK).count()
-        for p in picks:
-            if p.game == game:
-                messages.error(request, 'This game has already been picked')
+        if spread is not None:
+            wager = request.POST.get("wager")
+            wager = float(wager)
+            user = request.user
+            game = matchup
+
+            picks = Pick.objects.filter(user=user, game__week=WEEK)
+            wp = Pick.objects.filter(user=user, game__week=WEEK).count()
+            for p in picks:
+                if p.game == game:
+                    messages.error(request, 'This game has already been picked')
+                    return HttpResponseRedirect(reverse('nfl_matchups'))
+
+            if wp > 2:
+                messages.error(request, 'You can only choose 3 games per week')
                 return HttpResponseRedirect(reverse('nfl_matchups'))
 
-        if wp > 2:
-            messages.error(request, 'You can only choose 3 games per week')
+            account = Account.objects.get(user=user)
+
+            if account.check_balance(wager):
+                account.balance = account.balance - wager
+                account.in_play += wager
+                account.save()
+
+                pick = Pick(user=user, game=game, pick=spread, wager=wager)
+                pick.save()
+
+                return HttpResponseRedirect(reverse('nfl_matchups'))
+                
+            else:
+                messages.error(request, "You don't have enough funds to place that bet.")
+                return HttpResponseRedirect(reverse('nfl_matchups'))
+
+        else:
+            messages.error(request, "You didn't choose a spread! Please try again.")
             return HttpResponseRedirect(reverse('nfl_matchups'))
-
-        pick = Pick(user=user, game=game, pick=spread)
-        pick.save()
-
-        return HttpResponseRedirect(reverse('nfl_matchups'))
     else:
         return render(request, 'nfl_matchup_detail.html', {'matchup': matchup})
 

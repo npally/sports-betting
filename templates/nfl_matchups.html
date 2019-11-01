@@ -14,7 +14,11 @@
 
 <h2>This Week's Picks</h2>
 {% for pick in picks %}
-<p>- {{ pick.get_pick }}</p>
+{% if pick.wager is not None %}
+<h5>- {{ pick.get_pick }} | Wager: ${{ pick.wager }}</h5>
+{% else %}
+<h5>- {{ pick.get_pick }} | Wager: $0</h5>
+{% endif %}
 {% endfor %}
 <br>
 <h2>NFL Games for {{ week }}</h2>

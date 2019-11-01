@@ -62,16 +62,18 @@ class Pick(models.Model):
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     game = models.ForeignKey('Game', on_delete=models.CASCADE)
     pick = models.CharField(max_length=40)
+    wager = models.FloatField(null=True)
     outcome = models.CharField(max_length=5, choices=choices, null=True)
     
     def __str__(self):
         points = float(self.pick.split()[-1])
+        team = " ".join(self.pick.split()[:-1])
         if points < 0:
-            return "{} | {} {}".format(self.game, self.user, self.pick)
+            return " {} | {} {} {} Wager: ${}".format(self.game, self.user, team, points, self.wager)
         elif points > 0:
             p = self.pick.split()[-1]
-            team = self.pick.split()[:-1]
-            return "{} | {} {} +{}".format(self.game, team, p)
+            team = " ".join(self.pick.split()[:-1])
+            return "{} | {} {} +{} Wager: ${}".format(self.game, self.user, team, points, self.wager)
     
     def get_pick(self):
         points = float(self.pick.split()[-1])

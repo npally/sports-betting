@@ -12,24 +12,37 @@
 </div>
 
 <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-4">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">NBA Matchups</h5>
-              <p class="card-text">See today's lines.</p>
+              <p class="card-text">See the latest lines from the association. 
+                Updated hourly.
+              </p>
               <a href="{% url 'nba_matchups' %}" class="btn btn-primary">View Now</a>
             </div>
           </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">NFL Matchups</h5>
-              <p class="card-text">See this week's lines.</p>
+              <p class="card-text">See this week's lines from the NFL. Updated hourly.</p>
               <a href="{% url 'nfl_matchups' %}" class="btn btn-primary">View Now</a>
             </div>
           </div>
         </div>
+        <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Rankings</h5>
+                <p class="card-text">See how you rate against world-class bettors.</p>
+                <a href="" class="btn btn-primary">Coming Soon</a>
+              </div>
+            </div>
+          </div>
+
+
       </div>
  
 {% endblock content %}

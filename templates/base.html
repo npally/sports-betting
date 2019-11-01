@@ -69,6 +69,11 @@
         </ul> -->
         {% if user.is_authenticated %}
           <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <button type="button" class="btn btn-success">
+                      Balance $ <span class="badge badge-light">{{ user.account.get_balance }}</span>
+                    </button>
+                </li>
             <li class="nav-item">
               <a class="nav-link dropdown-toggle" href="#" id="userMenu"\
               data-toggle="dropdown" aria-haspopup="true" aria-expanded\
