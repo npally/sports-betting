@@ -151,4 +151,4 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
-# STATIC_ROOT = '/home/kilgoretrout1/nfl-pickem/static'
+# STATIC_ROOT = '/home/kilgoretrout1/nba-picks/static'

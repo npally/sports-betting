@@ -11,6 +11,9 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'spread.settings'
 django.setup()
 
 from nfl.models import Game, Week
+from django.utils import timezone
+today = timezone.now()
+today = today.date()
 
 WEEK = scripts.get_week()
 # deployment '/home/kilgoretrout1/spread/csv_files/spreads.csv'

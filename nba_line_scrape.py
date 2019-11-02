@@ -12,6 +12,9 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'spread.settings'
 django.setup()
 
 from nba.models import Game
+from django.utils import timezone
+today = timezone.now()
+today = today.date()
 
 teams = {'Atlanta': 'Atlanta Hawks', 'Boston': 'Boston Celtics', 'Brooklyn': 'Brooklyn Nets', 
          'Charlotte': 'Charlotte Hornets', 'Chicago': 'Chicago Bulls', 'Cleveland': 'Cleveland Cavaliers', 
@@ -55,7 +58,7 @@ for game in games:
 
 for m in matchups:
 
-    games = Game.objects.filter(date_time__date=date.today())
+    games = Game.objects.filter(date_time__date=today)
     for game in games:
         if m[0][0] == game.away_team and m[1][0] == game.home_team:
             game.away_spread = float(m[0][1])
