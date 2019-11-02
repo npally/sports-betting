@@ -61,8 +61,8 @@ def nfl_matchup_detail(request, pk):
                 account.in_play += wager
                 account.save()
 
-                # pick = Pick(user=user, game=game, pick=spread, wager=wager)
-                # pick.save()
+                pick = Pick(user=user, game=game, pick=spread, wager=wager)
+                pick.save()
 
                 return HttpResponseRedirect(reverse('nfl_matchups'))
                 
